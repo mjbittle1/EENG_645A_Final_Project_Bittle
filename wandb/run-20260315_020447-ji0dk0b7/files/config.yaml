@@ -1,0 +1,63 @@
+_wandb:
+    value:
+        cli_version: 0.24.0
+        e:
+            9avyq753d8uvfei3odetkzuignq951f7:
+                args:
+                    - --model
+                    - .\runs\detect\SARDet_100K_YOLOv10n\yolov10n_run_200_epoch\weights\best.pt
+                codePath: evaluate.py
+                codePathLocal: evaluate.py
+                cpu_count: 20
+                cpu_count_logical: 28
+                cudaVersion: "13.1"
+                disk:
+                    /:
+                        total: "1999445934080"
+                        used: "1328303001600"
+                email: mj.bittle2@gmail.com
+                executable: C:\Python314\python.exe
+                gpu: NVIDIA GeForce RTX 5070 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 8960
+                      memoryTotal: "17094934528"
+                      name: NVIDIA GeForce RTX 5070 Ti
+                      uuid: GPU-23a46848-df7d-bacd-44c8-c9ecc117538e
+                host: DESKTOP-5V8AD4S
+                memory:
+                    total: "34122645504"
+                os: Windows-11-10.0.26200-SP0
+                program: C:\Users\Michael\OneDrive\Desktop\26.1 WI\EENG 645A - Practical Machine Learning\Final Project\evaluate.py
+                python: CPython 3.14.0
+                root: C:\Users\Michael\OneDrive\Desktop\26.1 WI\EENG 645A - Practical Machine Learning\Final Project
+                startedAt: "2026-03-15T06:04:47.308355Z"
+                writerId: 9avyq753d8uvfei3odetkzuignq951f7
+        m: []
+        python_version: 3.14.0
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 2
+                - 16
+            "4": 3.14.0
+            "5": 0.24.0
+            "8":
+                - 2
+                - 3
+            "12": 0.24.0
+            "13": windows-amd64
+data:
+    value: dataset.yaml
+model:
+    value: .\runs\detect\SARDet_100K_YOLOv10n\yolov10n_run_200_epoch\weights\best.pt
+project:
+    value: SARDet_100K_YOLOv10n_Eval
+split:
+    value: test

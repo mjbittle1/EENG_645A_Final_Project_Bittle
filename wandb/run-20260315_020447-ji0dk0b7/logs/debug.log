@@ -1,0 +1,24 @@
+2026-03-15 02:04:47,311 INFO    MainThread:11896 [wandb_setup.py:_flush():81] Current SDK version is 0.24.0
+2026-03-15 02:04:47,311 INFO    MainThread:11896 [wandb_setup.py:_flush():81] Configure stats pid to 11896
+2026-03-15 02:04:47,311 INFO    MainThread:11896 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-15 02:04:47,311 INFO    MainThread:11896 [wandb_init.py:setup_run_log_directory():717] Logging user logs to C:\Users\Michael\OneDrive\Desktop\26.1 WI\EENG 645A - Practical Machine Learning\Final Project\wandb\run-20260315_020447-ji0dk0b7\logs\debug.log
+2026-03-15 02:04:47,311 INFO    MainThread:11896 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to C:\Users\Michael\OneDrive\Desktop\26.1 WI\EENG 645A - Practical Machine Learning\Final Project\wandb\run-20260315_020447-ji0dk0b7\logs\debug-internal.log
+2026-03-15 02:04:47,311 INFO    MainThread:11896 [wandb_init.py:init():844] calling init triggers
+2026-03-15 02:04:47,311 INFO    MainThread:11896 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'model': '.\\runs\\detect\\SARDet_100K_YOLOv10n\\yolov10n_run_200_epoch\\weights\\best.pt', 'data': 'dataset.yaml', 'project': 'SARDet_100K_YOLOv10n_Eval', 'split': 'test', '_wandb': {}}
+2026-03-15 02:04:47,311 INFO    MainThread:11896 [wandb_init.py:init():892] starting backend
+2026-03-15 02:04:49,646 INFO    MainThread:11896 [wandb_init.py:init():895] sending inform_init request
+2026-03-15 02:04:49,680 INFO    MainThread:11896 [wandb_init.py:init():903] backend started and connected
+2026-03-15 02:04:49,681 INFO    MainThread:11896 [wandb_init.py:init():973] updated telemetry
+2026-03-15 02:04:49,682 INFO    MainThread:11896 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-15 02:04:50,163 INFO    MainThread:11896 [wandb_init.py:init():1044] starting run threads in backend
+2026-03-15 02:04:50,290 INFO    MainThread:11896 [wandb_run.py:_console_start():2529] atexit reg
+2026-03-15 02:04:50,290 INFO    MainThread:11896 [wandb_run.py:_redirect():2377] redirect: wrap_raw
+2026-03-15 02:04:50,290 INFO    MainThread:11896 [wandb_run.py:_redirect():2446] Wrapping output streams.
+2026-03-15 02:04:50,290 INFO    MainThread:11896 [wandb_run.py:_redirect():2469] Redirects installed.
+2026-03-15 02:04:50,292 INFO    MainThread:11896 [wandb_init.py:init():1084] run started, returning control to user process
+2026-03-15 02:05:52,425 INFO    MainThread:11896 [wandb_run.py:_finish():2295] finishing run mj-bittle3/SARDet_100K_YOLOv10n_Eval/ji0dk0b7
+2026-03-15 02:05:52,426 INFO    MainThread:11896 [wandb_run.py:_atexit_cleanup():2494] got exitcode: 0
+2026-03-15 02:05:52,426 INFO    MainThread:11896 [wandb_run.py:_restore():2476] restore
+2026-03-15 02:05:52,426 INFO    MainThread:11896 [wandb_run.py:_restore():2482] restore done
+2026-03-15 02:05:53,075 INFO    MainThread:11896 [wandb_run.py:_footer_sync_info():3870] logging synced files
