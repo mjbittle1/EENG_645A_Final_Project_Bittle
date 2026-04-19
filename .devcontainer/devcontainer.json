@@ -1,0 +1,27 @@
+{
+	"name": "YOLO Coder Workspace",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
+			"installCudnn": true,
+			"cudaVersion": "12.1"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance"
+			]
+		}
+	},
+	"runArgs": [
+		"--gpus", "all",
+		"--shm-size", "16g"
+	],
+	"remoteUser": "vscode",
+	"postCreateCommand": "pip install -r requirements.txt"
+}

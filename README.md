@@ -28,11 +28,21 @@ This project trains and evaluates a YOLOv10 object detection model on the SARDet
 
 ### Training
 
-To begin training the model on the SARDet dataset using the `yolov10n` base weights:
+**Local / Single GPU Training (YOLOv10n):**
+To begin training the model on the SARDet dataset using the base parameters:
 
 ```bash
 python train.py
 ```
+
+**Cluster / Multi-GPU Training (YOLO26 Suite):**
+To train the specialized YOLO26 models (`n`, `s`, `m`, `l`, `x`) using Distributed Data Parallel (DDP) on a GPU cluster:
+
+```bash
+# Example: Train the small ('s') model on 4 GPUs
+python train_YOLO26.py --size s --device "0,1,2,3" --cache
+```
+*(AutoBatch is enabled by default to automatically maximize your available VRAM, so no `--batch` parameter is necessary).*
 
 ### Evaluation
 
