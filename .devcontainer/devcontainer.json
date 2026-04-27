@@ -1,7 +1,9 @@
 {
     "name": "YOLO26 Training - CUDA 12.1",
-    "image": "pytorch/pytorch:2.4.0-cuda12.1-cudnn9-runtime",
-    "postCreateCommand": "pip install --upgrade pip && pip install -r .devcontainer/requirements.txt",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
     "customizations": {
         "vscode": {
             "extensions": [
