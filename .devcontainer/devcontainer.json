@@ -1,0 +1,44 @@
+{
+    "name": "YOLO26 Training — CUDA 12.1",
+
+    // Official NVIDIA PyTorch image: CUDA 12.1, cuDNN 9, Python 3.10
+    // Compatible with driver >= 525.x (covers CUDA 12.8 hosts running 580.x drivers)
+    // To target CUDA 11.8 instead, swap the image tag:
+    //   "pytorch/pytorch:2.4.0-cuda11.8-cudnn9-runtime"
+    "image": "pytorch/pytorch:2.4.0-cuda12.1-cudnn9-runtime",
+
+    // ── Docker run arguments ────────────────────────────────────────────────
+    "runArgs": [
+        "--gpus=all",           // pass all host GPUs into the container
+        "--shm-size=16g",       // prevent dataloader workers from crashing on /dev/shm limits
+        "--ipc=host"            // allows shared memory between processes (needed for many PyTorch ops)
+    ],
+
+    // ── Post-create: install project dependencies ───────────────────────────
+    // torch/torchvision/torchaudio are already pre-installed in the base image.
+    // Only install supplementary packages here to avoid pip conflicts.
+    "postCreateCommand": "pip install --upgrade pip && pip install -r .devcontainer/requirements.txt",
+
+    // ── VS Code extensions inside the workspace ─────────────────────────────
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/conda/bin/python",
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    },
+
+    // ── Mount the workspace at a predictable path inside the container ───────
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace",
+
+    // ── Remote user ─────────────────────────────────────────────────────────
+    // The pytorch base image runs as root by default; leave as-is for Coder.
+    "remoteUser": "root"
+}

@@ -2,7 +2,6 @@
 *.pt
 
 # Ignore large YOLO training output folders
-runs/
 wandb/
 
 # Python cache / VS Code
